@@ -1,0 +1,165 @@
+    :root {
+        --cor-fundo: #f3f5f9;
+        --cor-cartao: #ffffff;
+        --cor-texto: #1f2937;
+        --cor-suave: #6b7280;
+        --cor-borda: #e5e7eb;
+        --cor-primaria: #2f5496;
+        --cor-remover: #c0392b;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 24px 16px;
+        font-family: "Segoe UI", Calibri, Arial, sans-serif;
+        background: var(--cor-fundo);
+        color: var(--cor-texto);
+    }
+
+    /* Container principal */
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin: 0 0 4px;
+        color: var(--cor-primaria);
+        font-size: 1.6rem;
+    }
+
+    /* Subtítulo (parágrafo logo após o h1, dentro do header) */
+    header p {
+        margin: 0 0 24px;
+        color: var(--cor-suave);
+    }
+
+    /* ---------- Formulário e busca ---------- */
+    form,
+    search {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    input {
+        flex: 1 1 200px;
+        padding: 10px 12px;
+        font-size: 1rem;
+        border: 1px solid var(--cor-borda);
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    input:focus {
+        outline: 2px solid var(--cor-primaria);
+        border-color: transparent;
+    }
+
+
+    /* Botões: estilo base (usado em "Cadastrar") */
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background: var(--cor-primaria);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        filter: brightness(1.1);
+    }
+
+    /* Contador (parágrafo dentro de main, fora do header e dos cartões) */
+    main>p {
+        margin: 0 0 16px;
+        color: var(--cor-suave);
+        font-size: 0.95rem;
+    }
+
+    /* ---------- Lista e cartões ---------- */
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 16px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 16px;
+        background: var(--cor-cartao);
+        border: 1px solid var(--cor-borda);
+        border-left: 5px solid var(--cor-primaria);
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    article:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Atributo 1 do cartão */
+    article h3 {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    /* Atributo 2 do cartão */
+    article p {
+        margin: 0 0 12px;
+        color: var(--cor-suave);
+    }
+
+    /* Área de ações do cartão */
+    article button {
+        display: flex;
+        gap: 8px;
+        margin-top: auto;
+    }
+
+    /* Botões dentro do cartão (sobrescrevem o estilo base) */
+    article button {
+        flex: 1;
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        background: var(--cor-primaria);
+    }
+
+    /* Botão "Remover": o último botão do rodapé do cartão */
+    article button {
+        background: var(--cor-remover);
+    }
+
+    /* Mensagem de lista vazia (elemento <aside> dentro da section) */
+    section aside {
+        grid-column: 1 / -1;
+        padding: 24px;
+        text-align: center;
+        color: var(--cor-suave);
+    }
+
+    .btn-estilo{
+        background-color: #c0392b;
+        padding: 10px;
+        color: #ffffff;
+    }
+
+    .card-estilo{
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 1px solid darkblue;
+        padding: 20px;
+        width: 300px;
+    }
