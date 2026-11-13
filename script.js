@@ -41,15 +41,20 @@ function renderizarPacientes(){
         for(let i in pacientes){
             let item = document.createElement('article');
 
+            let numAnimal = document.createElement('p');
+            numAnimal.textContent = pacientes[i].id;
+
             let nomeAnimal = document.createElement('h3');
-            nomeAnimal.textContent = pacientes[i].id + " " + pacientes[i].nome;
+            nomeAnimal.textContent = 'Pet: ' + pacientes[i].nome;
 
             let nomeTutor = document.createElement('p');
-            nomeTutor.textContent = pacientes[i].tutor;
+            nomeTutor.textContent = 'Tutor: ' + pacientes[i].tutor;
 
             let btnRemover = document.createElement('button');
             btnRemover.textContent = 'Remover';
+            btnRemover.classList.add('btn-estilo')
 
+            item.appendChild(numAnimal);
             item.appendChild(nomeAnimal);
             item.appendChild(nomeTutor);
             item.appendChild(btnRemover);

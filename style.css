@@ -1,32 +1,94 @@
-body{
+body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: rgb(255, 249, 242);
+    min-height: 100vh;
     margin: 20px;
 }
-h1{
+
+h1 {
     color: rgb(233, 49, 141);
     margin-bottom: 0;
 }
-p{
+
+p {
     margin-top: 0;
     color: rgb(255, 100, 177);
 }
-.campo{
-    color: rgb(166, 27, 73);
+article{
+    min-width: 180px;
+    max-width: 200px;
+    min-height: 60px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgb(254, 254, 255);
+    box-shadow: 2px 2px 4px rgb(166, 27, 73);
+    margin-bottom: 20px;
+    margin: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+section {
+    
+    border: 3px solid rgb(255, 100, 177);
+    color: rgb(233, 49, 141);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 15px;
+    min-width: 940px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    gap: 10px;
 }
 
-.btn-estilo{
-        background-color: #c0392b;
-        padding: 10px;
-        color: #ffffff;
-    }
+input{
+    text-align: center;
+    margin-left: 10px;
+    width: 30%;
+    height: 20px;
+}
 
-.card-estilo{
-        background-color: #ffffff;
-        border-radius: 8px;
-        border: 1px solid darkblue;
-        padding: 20px;
-        width: 300px;
-    }
+.campo {
+    color: rgb(166, 27, 73);
+}
+#cadastro{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 80px;
+    border-radius: 20px;
+    min-width: 800px;
+    border: 3px solid rgb(255, 100, 177);
+    background-color: #ffffff;
+}
+button {
+    border-radius: 12px;
+    background-color: #ebb78c;
+    width: 300px;
+    height: 30px;
+    color: #935454;
+    border: 2px #935454 solid;
+    box-shadow: 2px 2px 8px #a2633082;
+}
+button:hover{
+    background-color: #f9d9bf;
+}
 
+.btn-estilo {
+    margin-top: 30px;
+    margin-bottom: 0;
+    border-radius: 12px;
+    background-color: #ebb78c;
+    width: 150px;
+    height: 30px;
+    color: #935454;
+    border: 2px #935454 solid;
+    box-shadow: 2px 2px 8px #a2633082;
+
+}
+
+.btn-estilo:hover {
+    background-color: #f9d9bf;
+}
